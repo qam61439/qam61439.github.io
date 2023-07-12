@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+  
+   Rural Southern Keto Recipes website
+   Author: Quentin Marrow
+   Date:   7/9/2023
+   
+   Filename: rketo_fest.html
+   -->
+   
+   <title>Rural South Keto</title>
+
+   <meta charset="utf-8" />
+
+	<link href="rketo_layout.css" rel="stylesheet" />
+	<link href="rketo_format.css" rel="stylesheet" />
+	<link href="rketo_forms.css" rel="stylesheet" />
+
+</head>
+
+<body>
+   <header>
+
+      <img src="rs_ketoheader3.png" alt="Rural South Keto" /> 
+
+   </header>
+  
+   <nav>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="rketo_recipes.html">Recipes and Meal Ideas</a></li>
+		 <li><a href="rketo_form.html">Contact Us</a></li>
+		 <li><a href="rketo_fest.html">Rural South Keto Festival</a></li>		 
+         <li><a href="rketo_faq.html">FAQ</a></li>
+      </ul>
+   </nav>
+    <article class="rural_keto"> 
+      <h2>About Rural South Keto Festival</h2>
+	
+																					<!-- Countdown function - JS further down -->  
+	<label>Time remaining until the Rural South Keto Festival Begins: </label><strong><label id="kfest"></label></strong><hr>
+	
+		  <p>The <strong>Rural South Keto Festival</strong> is an event in which communities from all around can 
+		  get together and celebrate better health and share recipes.</p>
+		  
+		  
+		  <p>There will be live music and vendors from all around the area as well.  The theme of the festival this
+		  year will be seasonal side items for the fall.</p>
+		  
+		  <p>We will be having a side item contest this year with a first place prize of <strong>$500</strong>, a second place prize
+		  of <strong>$250</strong> and a third place prize of <strong>$100</strong>.  There will be a panel of 5 judges with different backgrounds and
+		  a love for great food!
+		  
+		  <p>If you would like to enter in the side item contest, please use the Contact Us form and leave your contact
+		  information along with selecting 'Yes' under the question "Would you like for someone to call you?".  This is
+		  to confirm that your intention is to enter into the contest along with the dish you will be bringing.</p>
+		  
+      <h2>Common Questions</h2>		
+		  <p><strong>What kind of food will vendors have?</strong><br>
+		  Rest assured, there will definitely be BBQ.  We are also working on having a seafood vendor come out with
+		  some keto-friendly seafood options.</p>
+	  
+		  <p><strong>What is the date and time for the event?</strong><br>
+		  Saturday, September 2, 2023.  The event begins at 10:00am.</p>
+		  
+		  <p><strong>Who are the food contest judges?</strong><br>
+		  To keep the contest as fair and neutral as possible, we will not be providing judge names prior to the event.
+		  Rest assured, the judging panel will be diverse to eliminate the possibility of certain food types being
+		  overly liked or overly disliked due to similar cultural preference.</p>
+
+		  <p><strong>How can I become a judge?</strong><br>
+		  Reach out to us via the Contact Us form and we will set up time to interview you for the role.  We will also
+		  select different judges each year.  So if you are not a judge this year, you may be able to become one in upcoming
+		  years.</p>
+
+
+		  <p><strong>What about parking?</strong><br>
+		  Since the event is taking place in a rural area, there will be acres upon acres to park vehicles.  Additionally,
+		  there will be plenty of space to bring lawn chairs if you so wish.</p>		  
+		  
+	</article>		
+		<!-- Countdown function -->
+		<script>
+		
+			var ketoFest = new Date("Sep 2, 2023 10:00:00").getTime();
+
+		/* Specified Interval */
+			setInterval(function() {
+		  
+			var currentDT = new Date().getTime();
+		  	var daysLeft = ketoFest - currentDT;
+
+		  /* Math methods */
+			var kDays = Math.floor(daysLeft / (1000 * 60 * 60 * 24));
+			var kHours = Math.floor((daysLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var kMinutes = Math.floor((daysLeft % (1000 * 60 * 60)) / (1000 * 60));
+			var kSeconds = Math.floor((daysLeft % (1000 * 60)) / 1000);
+
+		  <!-- Countdown result -->
+		  document.getElementById("kfest").innerHTML = kDays + " Days, " + kHours + " Hours, "
+		  + kMinutes + " Minutes, and " + kSeconds + " Seconds "; },);
+
+		</script>
+
+   <footer>
+	<address>
+
+      Rural South Keto &#8226; 1000 Hwy US 158 East &#8226; Soul City, NC 27563 &#8226; 252-555-3355
+	</address>
+   </footer>
+</body>
+</html>

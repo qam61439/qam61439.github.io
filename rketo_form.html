@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+  
+   Rural Southern Keto Recipes website
+   Author: Quentin Marrow
+   Date:   7/9/2023
+   
+   Filename: rketo_form.html
+   -->
+   
+   <title>Rural South Keto</title>
+
+   <meta charset="utf-8" />
+
+	<link href="rketo_layout.css" rel="stylesheet" />
+	<link href="rketo_format.css" rel="stylesheet" />
+	<link href="rketo_forms.css" rel="stylesheet" />
+
+	<!--Javascript added to call function for current date and time -->
+	<script src="rketo_script.js" defer></script>
+</head>
+
+<body>
+   <header>
+
+      <img src="rs_ketoheader3.png" alt="Rural South Keto" /> 
+
+   </header>
+	
+   <nav>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="rketo_recipes.html">Recipes and Meal Ideas</a></li>
+		 <li><a href="rketo_form.html">Contact Us</a></li>
+		 <li><a href="rketo_fest.html">Rural South Keto Festival</a></li>	
+         <li><a href="rketo_faq.html">FAQ</a></li>
+      </ul>
+   </nav>
+   <article id="about_keto"><br>
+	<strong><label>The current date and time is:&nbsp;</label><label id="dtNow"></label></strong>
+      <h1>Contact Us</h1>
+      
+	  <p>Need advice on recipes?</p>
+      <p>As we continue to expand this site, we will add more recipes.  In addition to expanding
+	  the recipes on this site, you can contact us (<i>using the form below</i>) with regular food that you would like 
+	  to see if we have a comparable recipe that we have not yet posted that you can use.</p>
+      
+	  <!-- Create and format a form with multiple field sets -->
+	  <h2>Enter Details Below</h2>
+		<form id="contactus">
+			<fieldset id="reciperequest">
+				<legend>Your Contact Information</legend><br>
+
+					<!-- Text Input -->
+					<div class="formRow">						
+						<label for="name">Name*</label>&nbsp;
+
+					<!-- validate data with having certain fields required -->	
+						<input name="custName" id="name" type="text" placeholder="First and Last Name" required />
+					</div>
+					
+					<div class="formRow">					
+					<label for="street">Street address</label>&nbsp;
+					<input name="custStreet" id="street" type="text" />
+				</div>
+
+				<div class="formRow">					
+					<label for="city">City</label>&nbsp;
+					<input name="custCity" id="city" type="text" />
+				</div>
+
+				<div class="formRow">					
+					<label for="state">State</label>&nbsp;
+					<input name="custState" id="state" type="text" />
+				</div>
+
+				<div class="formRow">					
+					<label for="zip">Postal code</label>&nbsp;
+					<input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)"
+					pattern="^\d{5}(-\d{4})?$" />
+					<!-- validate data with patterns and field lengths (above) -->	
+				</div>
+
+					<!-- mobile keyboard type -->	
+				<div class="formRow">					
+					<label for="phone">Phone number</label>&nbsp;
+					<input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
+					pattern="^\d{10}$|^(\(d{3}[\s-]?\d{4}$" />
+					<!-- validate data with patterns and field lengths (above) -->						
+				</div>
+
+					<!-- mobile keyboard type -->	
+				<div class="formRow">					
+					<label for="mail">E-mail*</label>&nbsp;
+
+					<!-- validate data with having certain fields required -->	
+					<input name="custEmail" id="mail" type="email" placeholder="Enter E-mail Here" required /><br />
+				</div>
+
+					<!-- check box -->
+				<div>	
+					<input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+					<label for="mailCB">I would like to receive Rural Keto emails.</label><br /><br />
+				</div>
+
+					<!-- range slider -->				
+				<div class="formRow">
+					<label for="rangeBox">Select number of monthly emails to receive:</label><br />
+					1
+					<input name="serviceRate" id="rangeBox" type="range"
+						value="2" step="1" min="1" max="4" /><br />
+					4
+				</div>
+
+				<p>* = Required</p>
+			</fieldset>
+		</br>
+		
+			<fieldset id="reciperequest">
+				<legend>Recipe Request</legend><br>
+				<div>
+
+					<!-- datalist -->
+					<label for="dish">What is your dietary restriction?</label>
+					<input name="favDish" id="dish" type="text" list="dishType" />
+					
+					<datalist id="dishType">
+						<option value="No Meat">
+						<option value="No Pork">
+						<option value="Vegetarian">
+						<option value="Vegan">
+						<option value="Shellfish Allergy">
+						<option value="Nut Allergy">
+						<option value="Pescatarian">
+						<option value="No Soy">
+						<option value="Other (Fill in the box below)">
+						<option value="No Dairy">
+						<option value="None">
+					</datalist>
+				</div>
+
+						<!-- text area -->
+						<label for="commBox">Specify dietary restrictions:&nbsp;</label>
+						<textarea name="custExp" id="commBox"></textarea>
+
+					<!-- selection list -->				
+				<div class="formRow"></br>
+					<label for="info">Meal types you are most interested in:<br />(Select all that apply)</label><br>
+					<select name="infoSrc" id="info" size="7" multiple>
+						<option value="internet">Breakfast</option>
+						<option value="mag">Brunch</option>
+						<option value="news">Lunch</option>
+						<option value="word">Dinner</option>
+						<option value="word">Drinks</option>
+						<option value="word">Snacks</option>
+						<option value="word">All</option>
+						<option value="other">Other</option>
+					</select>
+				</div><br>
+
+					<!-- radio buttons -->
+				<div></br>
+					<label>Do you have a specific recipe alternative you are looking for?</label><br />
+						<label for="hYes">Yes</label>
+						<input name="foodHot" id="hYes" value="yes" type="radio" />
+						<label for="hNo">No</label>
+						<input name="foodHot" id="hNo" value="no" type="radio" />
+				</div>
+					<!-- text area -->
+				<div>		
+						<textarea name="custExp" id="commBox" placeholder="If Yes, enter recipe request here."></textarea>
+				</div>
+					<!-- radio buttons -->
+				<div></br>
+					<label>Would you like for someone to call you?</label><br>
+						<label for="hYes">Yes</label>
+						<input name="foodHot" id="hYes" value="yes" type="radio" />
+						<label for="hNo">No</label>
+						<input name="foodHot" id="hNo" value="no" type="radio" /><br />
+
+					<!-- text area -->					
+					<textarea name="custExp" id="commBox" placeholder="If Yes, enter topic of discussion."></textarea><br /><br />
+				</div>						
+				
+					<!-- date/time -->
+				<div class="formRow">
+					<label for="commBox">Enter preferred contact date and time below: &nbsp;</label>
+					<input name="visitDate" id="visit" type="datetime-local" /><br />
+				</div>
+
+			</fieldset><br>
+
+			<fieldset id="reciperequest">
+				<legend>Other Information</legend><br>
+				<div>
+					<label>Have you ever attempted keto before?</label><br>
+						<label for="hYes">Yes</label>
+						<input name="foodHot" id="hYes" value="yes" type="radio" />
+						<label for="hNo">No</label>
+						<input name="foodHot" id="hNo" value="no" type="radio" /><br /><br />
+
+					<!-- spinner -->					
+					<label for="dineSpin">If Yes, how many times?</label>
+					<input name="dineOut" id="dineSpin" type="number" value="1" step="1" min="1" max="10" />
+				</div>						
+
+			</fieldset><br>			
+
+				<!-- submit and cancel/reset buttons -->	
+				<div id="buttons">
+					<input type="submit" value="Submit Form" />
+					<input type="reset" value="Clear All Information" />
+				</div><br>
+			
+		</form>
+	 
+   </article>
+
+   <footer>
+	<address>
+
+      Rural South Keto &#8226; 1000 Hwy US 158 East &#8226; Soul City, NC 27563 &#8226; 252-555-3355
+	</address>
+   </footer>
+</body>
+</html>

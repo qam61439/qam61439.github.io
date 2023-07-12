@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/*
+
+  
+   Rural South Keto Recipes Layout
+   Author: Quentin Marrow
+   Date:   6/15/2023
+   
+   Filename: rketo_layout.css
+
+
+*/
+
+/*Block element*/
+body {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1020px;
+	min-width: 640px;
+}
+
+/* Handle overflow */
+body > header {
+	margin: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+/* Floating element */
+body > nav {
+	width: 20%;
+	float: left;
+	margin: 0 0 0 1.5%;
+}
+
+
+body > article#about_keto {
+	width: 70%;
+	float: left;
+	margin: 0 3% 0 3%;
+}
+
+/* Floated layout */
+
+section#rightColumn {
+	float: right;
+	width: 40%;
+	padding: 1.5em;
+}
+
+
+body > article#about_keto img {
+	float: right;
+	width: 55%;
+	margin: 0px 0 10px 10px;
+}
+
+
+article.rural_keto {
+    float: left;
+	width: 74.5%;
+	margin: 0 4% 0 0%;
+}
+
+
+body > footer {
+	width: 100%;
+	clear: left;
+}
+
